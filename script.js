@@ -2,7 +2,14 @@ let database = [
     {
         username: "Dominik",
         password: "super"
-    }
+    },
+    {
+        username: "Arnold",
+        password: "gym"
+    }, {
+        username: "God",
+        password: "666"
+    },
 ];
 
 let newsFeed = [
@@ -13,6 +20,14 @@ let newsFeed = [
     {
         username: "Sally",
         timeline: "Stay Hard!"
+    },
+    {
+        username: "Marty",
+        timeline: "Whom..."
+    },
+    {
+        username: "Bob",
+        timeline: "When???"
     }
 ];
 
@@ -20,44 +35,56 @@ let userNamePrompt = prompt("What's your username?")
 let userPasswordPrompt = prompt("What's your password?")
 
 //Function declaration
-function signIn(userName, userPassword) {
-    if (database[0].username === userName &&
-        database[0].password === userPassword) {
-        console.log(newsFeed)
+function isUserValid(userName, userPassword) {
+    for (let i = 0; i < database.length; i++) {
+        if (database[i].username === userName &&
+            database[i].password === userPassword) {
+            return true;
+        }
+    }
+    return false;
+}
+
+function signIn() {
+    let isValid = isUserValid(userNamePrompt, userPasswordPrompt)
+    if (isValid === true) {
+        console.log(newsFeed);
     } else {
-        alert("Welcome Traveler!")
+        console.log("Welcome Traveler!")
     }
-}
-signIn(userNamePrompt, userPasswordPrompt)
-
-//Function expression 
-var newFunction = function () {
-
-};
-
-//Expression - Is something that produce a value. 
-1 + 3;
-var a = 2;
-return true;
-
-//calling or invoking a function
-alert()
-newFunction(param1, param2)
-
-//assign a variable
-var a = true;
-
-//function vs method
-function thisIsAFunction() {
 
 }
 
-var obj = {
-    thisIsAMethod: function () {
+signIn()
 
-    }
-}
+// //Function expression
+// var newFunction = function () {
 
-thisIsAFunction()
-obj.thisIsAMethod()
+// };
+
+// //Expression - Is something that produce a value.
+// 1 + 3;
+// var a = 2;
+// return true;
+
+// //calling or invoking a function
+// alert()
+// newFunction(param1, param2)
+
+// //assign a variable
+// var a = true;
+
+// //function vs method
+// function thisIsAFunction() {
+
+// }
+
+// var obj = {
+//     thisIsAMethod: function () {
+
+//     }
+// }
+
+// thisIsAFunction()
+// obj.thisIsAMethod()
 
