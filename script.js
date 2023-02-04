@@ -8,21 +8,24 @@ let database = [
 let newsFeed = [
     {
         username: "Bobby",
-        timeline: "So fck tired!"
+        timeline: "So tired!"
     },
     {
         username: "Sally",
-        timeline: "So fck tired!"
+        timeline: "Stay Hard!"
     }
 ];
 
 let userNamePrompt = prompt("What's your username?")
 let userPasswordPrompt = prompt("What's your password?")
 
-function signIn(userName, password) {
-    if (database[0].username == userNamePrompt &&
-        database[0].password == userPasswordPrompt)
-        alert("You in")
+function signIn(userName, userPassword) {
+    if (database[0].username === userName &&
+        database[0].password === userPassword) {
+        console.log(newsFeed)
+    } else {
+        alert("Welcome Traveler!")
+    }
 }
 
-signIn()
+signIn(userNamePrompt, userPasswordPrompt)
