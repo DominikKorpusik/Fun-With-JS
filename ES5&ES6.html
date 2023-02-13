@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>ES5 & ES6</title>
+</head>
+
+<body>
+    <h1>ES5 & ES6</h1>
+    <h2>Let & Const</h2>
+    <textarea>
+        const player = 'Bobby';
+        let exp = 100;
+        let wizardLevel = false;
+
+        if (exp > 90) {
+        let wizardLevel = true;
+        }
+
+        //You can change the properties of the object, still you can't reassign.
+        const obj = {
+        player: 'Jack',
+        exp: 100,
+        wizardLevel: false,
+        }
+    </textarea>
+    <h2>Destructuring</h2>
+    <textarea>
+        const recruit = {
+            player: 'Mort',
+            exp: 99,
+            wizardLevel: false,
+        }
+        
+        const player = recruit.player;
+        const exp = recruit.exp;
+        let wizardLevel = recruit.wizardLevel;
+        
+        const { player, exp } = recruit;
+    </textarea>
+    <h2>Object properties</h2>
+    <textarea>
+        const name = 'John Snow';
+
+        const obj = {
+            [name]: 'Hello',
+            [1 + 2]: 'Hihi'
+        }
+    </textarea>
+    <h2>Template string</h2>
+    <textarea>
+        const name = "John";
+        const age = 32;
+        const pet = "Horse";
+
+        const greeting = "Hello " + name + " you are "
+            + age + " years old, your " + pet + "is amazing.";
+
+        const greetingB = `Hello ${name} you are ${age} years old, your ${pet} is amazing.`
+    </textarea>
+    <h2>Default arguments</h2>
+    <textarea>
+        function greet(name = 'Johnny', age = 20, pet = "dog") {
+            return `Hello ${name} you are ${age} years old, your ${pet} is amazing.`
+        }
+    </textarea>
+    <h2>Arrow functions</h2>
+    <textarea>
+        function add(a, b) {
+            return a + b
+        }
+        
+        const add = (a, b) => a + b;
+    </textarea>
+
+
+
+    <script src="./es5&es6_script.js"></script>
+</body>
+
+</html>
