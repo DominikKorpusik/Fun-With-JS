@@ -19,16 +19,25 @@
 // //js2
 // var add = require('./add');
 
-// ES6 + Webpack2
+// // ES6 + Webpack2
 
-//js1
-export const add = (a, b) => a + b;
-//or
-export default function add(a, b) {
-    return a + b;
-}
+// //js1
+// export const add = (a,b) => a+b;
+// //or
+// export default function add(a,b){
+//     return a+b;
+// }
 
-//js2
-import { add } from '.add';
-//or
-import add from '.add';
+// //js2
+// import { add } from '.add';
+// //or
+// import add from '.add';
+
+// Webpack
+// module.exports = {
+//     entry: '.app/main.js',
+//     output: {
+//         path: './dist',
+//         filename: 'bundle.js'
+//     }
+// }
